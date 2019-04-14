@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
 import { MovieCardComponent } from './movie-card/movie-card.component'
+import { HeaderComponent } from './header/header.component'
+import { SideNavComponent } from './side-nav/side-nav.component'
 
 
 @Component({

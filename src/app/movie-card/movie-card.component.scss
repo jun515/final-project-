@@ -1,0 +1,32 @@
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card .card-title {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thumbnail {
+
+    display: block;
+    padding: 4px;
+    margin-bottom: 21px;
+    line-height: 1.42857143;
+    background-color: #2b3e50;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    transition: border .2s ease-in-out;
+
+}

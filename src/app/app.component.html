@@ -1,21 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-  <!--<h1>-->
-  <!--  Welcome to {{ title }}!-->
-  <!--</h1>-->
-  <!--<input type="text" name="value" [(ngModel)]="value"/>-->
-  <router-outlet></router-outlet>
-  
-
-  
-  <div class="row is-flex">
-     <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6"  *ngFor="let movie of movies; let i = index;">
-<app-movie-card [movie]="movie"></app-movie-card>
+<div class="main-container">
+  <app-header></app-header>
+  <div class="content-container">
+    <div class="clr-row">
+      <div class="clr-col-sm-6 clr-col-md-4 clr-col-lg-3 clr-col-xs-6" *ngFor="let movie of movies; let i = index;">
+        <app-movie-card [movie]="movie"></app-movie-card>
+      </div>
     </div>
+    <nav class="sidenav">
+      <app-side-nav></app-side-nav>
+    </nav>
   </div>
-  
- 
-
-  
-  
- 
+  <router-outlet></router-outlet>
+</div>

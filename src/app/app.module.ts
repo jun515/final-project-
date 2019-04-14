@@ -8,11 +8,15 @@ import { router } from './app.router';
 import { AppService } from './app.service'
 import { HttpClientModule } from '@angular/common/http';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { HeaderComponent } from './header/header.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    HeaderComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
