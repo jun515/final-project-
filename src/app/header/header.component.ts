@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  value;
   constructor() { }
 
   ngOnInit() {
+    console.log(this.value)
+  }
+  
+  onSubmit(value) {
+    console.log(value);
+   this.value = null;
   }
 
 }

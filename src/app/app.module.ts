@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
@@ -23,7 +24,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     ClarityModule,
     BrowserAnimationsModule,
     router,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

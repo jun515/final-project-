@@ -1,13 +1,13 @@
-<header class="header-6">
+<header class="header">
     <div class="branding">
         <a href="./" class="nav-link">
             <clr-icon shape="video-gallery"></clr-icon>
-            <span class="title">Movie Search</span>
+            <span class="title">Netflix & Chill</span>
         </a>
     </div>
-    <form class="search">
+    <form class="search" (ngSubmit)="onSubmit(value)">
         <label for="search_input">
-            <input id="search_input" type="text" placeholder="Search for keywords...">
+            <input id="search_input" type="text" placeholder="Search for keywords..." name="value" [(ngModel)]="value"/>
         </label>
     </form>
     <div class="header-actions">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
+import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'app-side-nav',
@@ -10,14 +11,17 @@ export class SideNavComponent implements OnInit {
   genresResponse;
   genres;
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService, public appComponent: AppComponent) {}
 
   ngOnInit() {
     this.appService.getGenres().subscribe(res => {
         this.genresResponse = res;
         this.genres = this.genresResponse.genres;
-        console.log(this.genres)
       })
+  }
+
+  onClick(id){
+    console.log(id)
   }
 
 }

@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component'
 import { SideNavComponent } from './side-nav/side-nav.component'
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,15 +15,27 @@ export class AppComponent implements OnInit {
   value;
   movies;
   apiResponse;
-  title = 'frontend-project';
+  newUser;
   
   constructor(private appService: AppService) {}
   
   ngOnInit() {
-    this.appService.getMovies().subscribe(res => {
+    this.appService.getTopRated().subscribe(res => {
         this.apiResponse = res;
-        this.movies = this.apiResponse.results
-        console.log(this.movies)
-      })
-  }
-}
+        this.movies = this.apiResponse.results;
+      
+    })
+    
+    this.newUser = {
+      "firstName": "Mark",
+      "lastName": "Nonchamp",
+      "email": "beginnersluck@yousuck.com",
+      "password": "string"
+    }
+        
+    // this.appService.createUser(this.newUser).subscribe(res => {
+    //   console.log(res)
+    // })
+    
+   
+}}

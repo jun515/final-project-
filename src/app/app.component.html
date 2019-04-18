@@ -1,7 +1,10 @@
 <div class="main-container">
   <app-header></app-header>
+
   <div class="content-container">
+
     <div class="clr-row">
+
       <div class="clr-col-sm-6 clr-col-md-4 clr-col-lg-3 clr-col-xs-6" *ngFor="let movie of movies; let i = index;">
         <app-movie-card [movie]="movie"></app-movie-card>
       </div>
