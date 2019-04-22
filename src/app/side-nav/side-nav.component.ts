@@ -17,11 +17,14 @@ export class SideNavComponent implements OnInit {
     this.appService.getGenres().subscribe(res => {
         this.genresResponse = res;
         this.genres = this.genresResponse.genres;
+        console.log(this.genres)
       })
   }
-
-  onClick(id){
-    console.log(id)
-  }
+  
+  // onClick(){
+  //   console.log(this.genres.id)
+  //   this.genres = null
+  // }
+ 
 
 }
