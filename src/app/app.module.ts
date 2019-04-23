@@ -11,13 +11,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { LoginComponent } from './login/login.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieCardComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    LoginComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

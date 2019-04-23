@@ -21,10 +21,13 @@ export class SideNavComponent implements OnInit {
       })
   }
   
-  // onClick(){
-  //   console.log(this.genres.id)
-  //   this.genres = null
-  // }
+  onClick(genre){
+    this.appService.getGenreMovies(genre.id)
+      .subscribe(res => {
+        console.log(res)
+        this.appService.movies = res.results
+      })
+  }
  
 
 }

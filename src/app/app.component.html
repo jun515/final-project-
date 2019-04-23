@@ -3,16 +3,8 @@
 
   <div class="content-container">
 
-    <div class="clr-row">
 
-      <div class="clr-col-sm-6 clr-col-md-4 clr-col-lg-3 clr-col-xs-6" *ngFor="let movie of movies; let i = index;">
-        <app-movie-card [movie]="movie"></app-movie-card>
-      </div>
-    </div>
-    <nav class="sidenav">
-      <app-side-nav></app-side-nav>
-    </nav>
+    <app-side-nav></app-side-nav>
+    <!--<app-movies></app-movies>-->
+    <router-outlet></router-outlet>
   </div>
-  <!--<button type="submit" (click)="appservice.loginUser()"> LogIn</button>-->
-  <router-outlet></router-outlet>
-</div>

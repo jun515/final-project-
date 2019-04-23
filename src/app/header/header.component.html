@@ -7,12 +7,29 @@
     </div>
     <form class="search" (ngSubmit)="onSubmit(value)">
         <label for="search_input">
-            <input id="search_input" type="text" placeholder="Search for keywords..." name="value" [(ngModel)]="value"/>
+            <input id="search_input" type="text" placeholder="Search for keywords..." name="value"/>
         </label>
     </form>
+
+
     <div class="header-actions">
-        <a href="./" class="nav-link nav-icon">
-            <clr-icon shape="star"></clr-icon>
-        </a>
+        <clr-dropdown>
+            <button class="nav-icon" clrDropdownTrigger>
+                <clr-icon shape="cog"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                <!--<a href="..." clrDropdownItem>About</a>-->
+                <a href="..." clrDropdownItem>Favorites</a>
+                <a href="login" clrDropdownItem>Log out</a>
+            </clr-dropdown-menu>
+        </clr-dropdown>
     </div>
+
+
+    <!--<div class="header-actions">-->
+    <!--    <a href="./" class="nav-link nav-icon">-->
+    <!--        <clr-icon shape="star"></clr-icon>-->
+    <!--    </a>-->
+    <!--</div>-->
 </header>

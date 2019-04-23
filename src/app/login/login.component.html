@@ -1,0 +1,50 @@
+<div class="login-wrapper">
+    <form class="login" (ngSubmit)="onSubmit(value)">
+        <section class="title">
+            <h3 class="welcome">Log</h3>
+            Your ass in!
+        </section>
+        <div class="login-group">
+            <clr-input-container>
+                <input type="text" name="username" clrInput placeholder="Username" [(ngModel)]="form.username" />
+            </clr-input-container>
+            <clr-password-container>
+                <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="form.password" />
+            </clr-password-container>
+            <button type="submit" class="btn btn-primary">NEXT</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+<!--<clr-modal [clrModalStaticBackdrop]="true">-->
+<!--    <div class="modal">-->
+<!--        <div class="modal-dialog modal-md" role="dialog" aria-hidden="true">-->
+<!--            <div class="modal-content">-->
+<!--<clr-modal [(clrModalOpen)]="basic" [clrModalSize]="'lg'" [clrModalStaticBackdrop]="false">-->
+
+<!--    <div class="modal-body">-->
+<!--        <div class="login-wrapper">-->
+<!--            <form class="login" (ngSubmit)="onSubmit(value)">-->
+<!--                <section class="title">-->
+<!--                    <h3 class="welcome">Log</h3>-->
+<!--                    Your ass in!-->
+<!--                </section>-->
+<!--                <div class="login-group">-->
+<!--                    <clr-input-container>-->
+<!--                        <input type="text" name="username" clrInput placeholder="Username" [(ngModel)]="form.username" />-->
+<!--                    </clr-input-container>-->
+<!--                    <clr-password-container>-->
+<!--                        <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="form.password" />-->
+<!--                    </clr-password-container>-->
+<!--                    <button type="submit" class="btn btn-primary">NEXT</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</clr-modal>-->
