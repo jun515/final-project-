@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 import { LoginComponent } from '../login/login.component';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -12,12 +14,14 @@ export class HeaderComponent implements OnInit {
   getMovies;
   movies;
   moviesResponse;
-  moviesList
+  moviesList;
+  hasToken = null;
   
-  constructor(public appService: AppService) { }
+  constructor(public appService: AppService,public router: Router, private location: Location) { }
 
   ngOnInit() {
-    // console.log(this.value)
+    this.hasToken=sessionStorage.getItem("token")
+    console.log(this.hasToken);
   }
   
   onSubmit(value) {
@@ -26,10 +30,17 @@ export class HeaderComponent implements OnInit {
       this.movies = this.moviesList.results;
       console.log(this.movies)
     })
+  }
     
-    
-    console.log(value);
-  this.value = null;
+    onClick() {
+      console.log('Ouch!')
+      sessionStorage.removeItem('token');
+      this.router.navigate(['/']);
+      location.reload();
+  }
+  
+  login(){
+    this.router.navigate(['login']);
   }
 
 }

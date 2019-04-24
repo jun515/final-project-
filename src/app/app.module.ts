@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { LoginComponent } from './login/login.component';
 import { MoviesComponent } from './movies/movies.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MoviesComponent } from './movies/movies.component';
     HeaderComponent,
     SideNavComponent,
     LoginComponent,
-    MoviesComponent
+    MoviesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

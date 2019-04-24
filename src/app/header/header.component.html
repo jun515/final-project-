@@ -19,9 +19,15 @@
                 <clr-icon shape="caret down"></clr-icon>
             </button>
             <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-                <!--<a href="..." clrDropdownItem>About</a>-->
                 <a href="..." clrDropdownItem>Favorites</a>
-                <a href="login" clrDropdownItem>Log out</a>
+                <!--<a href="login" clrDropdownItem *ngIf="hasToken else out">Log In</a>-->
+                <!--<a href="login" clrDropdownItem>Log Out</a>-->
+                <button class="btn btn-link" (click)=login() *ngIf="!hasToken else out">Log In</button>
+                <ng-template #out>
+                    <button (click)=onClick() class="btn btn-link">Log Out</button>
+                </ng-template>
+
+
             </clr-dropdown-menu>
         </clr-dropdown>
     </div>

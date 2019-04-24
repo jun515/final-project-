@@ -1,16 +1,3 @@
 <div *ngFor="let genre of genres; let i = index;">
-    <!--<a href="{{genre.id}}" id='genre' title="{{genre.name}}">{{genre.name}}</a>-->
     <button class="btn btn-link" type=submit (click)=onClick(genre)>{{genre.name}}</button>
-    <!--<button onclick="myFunction()">Click me</button>-->
-
-    <!--<p id="demo"></p>-->
-
-
-    <!--<script>-->
-    <!--    function myFunction() {-->
-    <!--        document.getElementById("demo").innerHTML = "Hello World";-->
-    <!--    }-->
-    <!--</script>-->
-    <!--<span id='genre'>{{ genre.name }}</span>-->
 </div>
-<!--//commented code are things i tried. i need to get the genre id's out of the array of objects and filter them out. then display.-->

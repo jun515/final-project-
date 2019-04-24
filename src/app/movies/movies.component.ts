@@ -12,7 +12,7 @@ export class MoviesComponent implements OnInit {
   movies;
   apiResponse;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService) {}
 
   ngOnInit() {
     this.appService.getTopRated().subscribe(res => {

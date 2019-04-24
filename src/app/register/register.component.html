@@ -1,0 +1,26 @@
+<div class="login-wrapper">
+    <form class="login" (ngSubmit)="onSubmit(value)">
+        <section class="title">
+            <h3 class="welcome">Log</h3>
+            Your ass in!
+        </section>
+        <div class="login-group">
+
+            <clr-input-container>
+                <input type="text" name="firstName" clrInput placeholder="First Name" [(ngModel)]="form.firstName" />
+            </clr-input-container>
+
+            <clr-input-container>
+                <input type="text" name="lastName" clrInput placeholder="Last Name" [(ngModel)]="form.lastName" />
+            </clr-input-container>
+
+            <clr-input-container>
+                <input type="text" name="email" clrInput placeholder="Email" [(ngModel)]="form.email" />
+            </clr-input-container>
+            <clr-password-container>
+                <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="form.password" />
+            </clr-password-container>
+            <button type="submit" class="btn btn-primary">NEXT</button>
+        </div>
+    </form>
+</div>

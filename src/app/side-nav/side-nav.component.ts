@@ -10,6 +10,7 @@ import { AppComponent } from '../app.component'
 export class SideNavComponent implements OnInit {
   genresResponse;
   genres;
+  results;
 
   constructor(private appService: AppService, public appComponent: AppComponent) {}
 
@@ -17,15 +18,13 @@ export class SideNavComponent implements OnInit {
     this.appService.getGenres().subscribe(res => {
         this.genresResponse = res;
         this.genres = this.genresResponse.genres;
-        console.log(this.genres)
       })
   }
   
   onClick(genre){
-    this.appService.getGenreMovies(genre.id)
-      .subscribe(res => {
-        console.log(res)
-        this.appService.movies = res.results
+    this.appService.getGenreMovies(genre.id).subscribe(res => {
+        this.results = res;
+        this.appService.movies = this.results.results
       })
   }
  

@@ -50,11 +50,12 @@ export class AppService {
 
 
   createUser(newUser){
-    return this._http.post('http://mean-stack-2019-02-oscar-phortonssf.c9users.io:8080/api/appUsers', newUser)
+    return this._http.post('http://mean-stack-2019-02-oscar-phortonssf.c9users.io:8080/api/appUsers/', newUser)
   }
   
   loginUser(newUser){
     return this._http.post('http://mean-stack-2019-02-oscar-phortonssf.c9users.io:8080/api/appUsers/login/', newUser)
+  
   
     
   }
