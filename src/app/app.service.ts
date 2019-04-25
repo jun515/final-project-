@@ -55,10 +55,10 @@ export class AppService {
   
   loginUser(newUser){
     return this._http.post('http://mean-stack-2019-02-oscar-phortonssf.c9users.io:8080/api/appUsers/login/', newUser)
-  
-  
-    
   }
+  
+  searchMovies(searchTerm){
+    return this._http.get(`https://api.themoviedb.org/3/search/movie?api_key=98605a382f8c29573f4141943c78c862&language=en-US&query=${searchTerm}&page=1&include_adult=false`)
+  }
+  
 }
-
-

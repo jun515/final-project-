@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   moviesResponse;
   moviesList;
   hasToken = null;
+  form = {}
   
   constructor(public appService: AppService,public router: Router, private location: Location) { }
 
@@ -25,16 +26,17 @@ export class HeaderComponent implements OnInit {
   }
   
   onSubmit(value) {
-    this.appService.getKeywords(value).subscribe(res => {
+    console.log(value)
+    this.appService.searchMovies(value).subscribe(res => {
       this.moviesList = res;
-      this.movies = this.moviesList.results;
-      console.log(this.movies)
+      this.appService.movies = this.moviesList.results;
+      console.log(this.moviesList)
     })
   }
     
     onClick() {
       console.log('Ouch!')
-      sessionStorage.removeItem('token');
+      sessionStorage.clear();
       this.router.navigate(['/']);
       location.reload();
   }
